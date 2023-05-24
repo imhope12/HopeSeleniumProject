@@ -2,6 +2,7 @@ package base;
 
 import java.io.File;
 import java.lang.reflect.Method;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
@@ -22,6 +23,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.constants;
 
 public class BaseTest {
 	// instance variable
@@ -56,7 +58,10 @@ public class BaseTest {
 
 		logger = extent.createTest(testMethod.getName());
 		setupDriver(browser);
-		driver.get(browser);
+		driver.manage().window().maximize();
+		driver.get(constants.url);
+		driver.manage().timeouts().implicitlyWait(10, null);
+		
 	}
 
 	@AfterMethod

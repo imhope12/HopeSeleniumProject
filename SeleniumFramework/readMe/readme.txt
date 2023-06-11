@@ -20,5 +20,5 @@ Suitelisteners Class:- retry, test case read and taking a screenshot done by sui
 RetrtAnalyzer class:- using if while condition to give command to retry count met.
 
 Setting command for listners. 
-copied the RetryAnalyzer for ITestAnnotation for retry. for that goto Suitlisners and open declaration of ITestAnnotation copy the method. and start to give retryAnalyser annotation.
+copied the RetryAnalyzer for ITestAnnotation for retry. for that goto Suitlisners and open declaration of ITestAnnotation copy the method and start to give retryAnalyser annotation.
 
